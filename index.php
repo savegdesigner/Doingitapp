@@ -17,8 +17,6 @@ if(isset($_SESSION['userUid'])){
     <title>DoingIt - Faça sua lista de tarefas</title>
 
     <!-- CSS Links -->
-    <!-- Font Style -->
-    <link rel="stylesheet" href="css/font.css">
     <!-- Reset -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Main Layout, Grid -->
@@ -30,7 +28,7 @@ if(isset($_SESSION['userUid'])){
 <body>
 
     <main class="page" wrapper>
-        <h1 class="title-index">Welcome to</h1>
+        <!-- <h1 class="title-index">Bem vindo</h1> -->
         <img src="imgs/icons/doingit-logo.svg" alt="DoingIt Logo" class="doingit-logo">
 
         <a href="login-pagina.php"class="primary-button">Login</a>

@@ -20,8 +20,6 @@ if(isset($_SESSION['userUid'])){
     <!-- Scripts -->
     <script defer src="js/transition.js"></script>
     <!-- CSS Links -->
-    <!-- Font Style -->
-    <link rel="stylesheet" href="css/font.css">
     <!-- Reset -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Main Layout, Grid -->
@@ -35,7 +33,7 @@ if(isset($_SESSION['userUid'])){
 
     <form class="page hide" action="servidor/cadastro.php" method="POST" wrapper>
     <img src="imgs/icons/doingit-logo.svg" alt="DoingIt Logo" class="doingit-logo">
-        <h1 class="title-cadastro">Cadastro</h1>
+        <h1 class="title-cadastro">Cadastre-se</h1>
 
         <?php
 

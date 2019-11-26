@@ -1,0 +1,154 @@
+body{
+    box-sizing: border-box;
+    padding: 20px 40px;
+}
+
+/* Navbar */
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.user-stuff{
+    display: flex;
+    align-items: center;
+}
+
+.username{
+    font-family: 'Poppins';
+    font-size: 20px;
+    color: #3ABAD6;
+    margin: 0 0 0 10px;
+}
+
+
+/* Main Layout */
+.inicio-page{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-box{
+    width: 70%;
+    max-width: 800px;
+    height: 600px;
+    border: 1px solid rgba(59, 59, 59, 0.13);
+    border-radius: 6px;
+    box-shadow: 0px 4px 18px rgba(27, 27, 27, 0.224);
+    overflow: hidden;
+}
+
+.list-title{
+    width: 100%;
+    height: 32px;
+    padding: 5px;
+    text-align: center;
+    background-color: #3ABAD6;
+    color: white;
+    box-sizing: border-box;
+}
+
+.list-title h1{
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.lists{
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list:nth-child(2) .content{
+    background-color: #D561E8;
+}
+
+.list:nth-child(3) .content{
+    background-color: #51BC76;
+}
+
+.list:nth-child(4) .content{
+    background-color: rgb(235, 233, 112);
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    padding: 16px 15px;
+    background-color: #3ABAD6;
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    color: white;
+    font-size: 16px;
+}
+
+.add-lists{
+    margin: 20px 0;
+    padding: 20px 10px;
+    color: #3B3B3B;
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-list-input{
+    width: 100%;
+    padding: 15px 15px;
+    margin: 15px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgba(37, 36, 36, 0.103);
+    box-shadow: 0px 4px 14px rgba(59, 59, 59, 0.158);
+    font-size: 16px;
+}
+
+
+/* Buttons */
+.edit-button{
+    margin: 0 5px;
+}
+
+.delete-button{
+    margin: 5px 20px 5px 12px;
+    width: 50px;
+}
+
+.add-button{
+    width: 50px;
+}
+
+/* Icons */
+.edit-avatar{
+    position: absolute;
+    left: 112px;
+    top: 85px;
+}
+
+.exit{
+    width: 55px;
+}
