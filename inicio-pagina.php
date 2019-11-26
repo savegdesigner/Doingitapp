@@ -53,59 +53,55 @@ session_start();
                     </div>
 
                     <div class="lists">
-                        <div class="list">
 
-                            <div class="content">
-                            <h3>Terminar o PI</h3>
-                            <a href="#"><img src="./imgs/icons/edit-button.svg" alt="Editar Lista" class="edit-button"></a>
-                            </div>
+                        <?php  
+
+                            require './servidor/connection.php';
+
+                            $sql = "SELECT * FROM lists WHERE id_user=?";
+                            $stmt = mysqli_stmt_init($conn); 
+
+                            if(!mysqli_stmt_prepare($stmt, $sql)){
+                                header("Location: ../login-pagina.php?error=pageloadsql");
+                                exit();
                             
-                            <a href="#"><img src="./imgs/icons/delete-button.svg" alt="Deletar Lista" class="delete-button"></a>
+                            }else{
+                                mysqli_stmt_bind_param($stmt, 'i', $_SESSION['userId']);
+                                mysqli_stmt_execute($stmt);
+                                
+                                $result = $stmt->get_result();
 
-                        </div>
+                                if($result->num_rows >= 1){
 
-                        <div class="list">
+                                    while($data = $result->fetch_assoc()){
 
-                            <div class="content">
-                            <h3>Incluir Ajax</h3>
-                            <a href="#"><img src="./imgs/icons/edit-button.svg" alt="Editar Lista" class="edit-button"></a>
-                            </div>
 
-                            <a href="#"><img src="./imgs/icons/delete-button.svg" alt="Deletar Lista" class="delete-button"></a>
+                                        echo "
+                                            <form method='POST' action='./servidor/delete.php' class='list'>
 
-                        </div>
+                                                <div class='content'>
+                                                <h3>{$data['list_name']}</h3>
+                                                <a href='#'><img src='./imgs/icons/edit-button.svg' alt='Editar Lista' class='edit-button'></a>
+                                                </div>
+                    
+                                                <button type='submit' class='delete' value={$data['id']} name='delete-button'><img src='./imgs/icons/delete-button.svg' alt='Deletar Lista' class='delete-button'></button>
+                    
+                                            </form>
+                                        ";
 
-                        <div class="list">
-
-                            <div class="content">
-                            <h3>Ir na aula do quintas nas quinta</h3>
-                            <a href="#"><img src="./imgs/icons/edit-button.svg" alt="Editar Lista" class="edit-button"></a>
-                            </div>
-
-                            <a href="#"><img src="./imgs/icons/delete-button.svg" alt="Deletar Lista" class="delete-button"></a>
-
-                        </div>
-
-                        <div class="list">
-
-                            <div class="content">
-                            <h3>Terminar as ADO de php</h3>
-                            <a href="#"><img src="./imgs/icons/edit-button.svg" alt="Editar Lista" class="edit-button"></a>
-                            </div>
-
-                            <a href="#"><img src="./imgs/icons/delete-button.svg" alt="Deletar Lista" class="delete-button"></a>
-
-                        </div>
-
-                    </div>
+                                    }
+                            }
+                        }
+                    
+                        ?>
 
                     <div class="add-lists">
                         <h2>Adicionar nova lista</h2>
 
-                        <div class="add">
-                        <input type="text" class="new-list-input">
-                        <a href="#"><img src="./imgs/icons/add-button.svg" alt="Adicionar nova lista" class="add-button"></a>
-                        </div>
+                        <form method="POST" action="./servidor/add-list.php" class="add">
+                            <input type="text" class="new-list-input" name="new-list">
+                            <button type="submit" class="submit-button" name="add-list-button"><img src="./imgs/icons/add-button.svg" alt="Adicionar nova lista" class="add-button"></button>
+                        </form>
                         
                     </div>
             
