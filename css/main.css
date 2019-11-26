@@ -1,0 +1,249 @@
+.primary-button {
+  background-color: #3ABAD6;
+  width: 250px;
+  padding: 8px 5px;
+  border-radius: 6px;
+  border: 1px solid #3ABAD6;
+  text-align: center;
+  font-family: Poppins Regular;
+  font-size: 18px;
+  color: white;
+  -webkit-transition: ease 300ms;
+  transition: ease 300ms;
+}
+
+.primary-button:hover {
+  background-color: transparent;
+  border: 1px solid #3ABAD6;
+  color: #3ABAD6;
+}
+
+.secondary-button {
+  width: 250px;
+  padding: 8px 5px;
+  border: 1px solid #3ABAD6;
+  border-radius: 6px;
+  text-align: center;
+  font-family: Poppins Regular;
+  color: #3ABAD6;
+  -webkit-transition: ease 300ms;
+  transition: ease 300ms;
+}
+
+.secondary-button:hover {
+  background-color: #3ABAD6;
+  color: white;
+}
+
+.error {
+  color: #ee6a6a;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.success {
+  color: #81d381;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 5px;
+}
+
+.page .title-index {
+  font-size: 32px;
+  width: 230px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page .title-index span {
+  color: #3ABAD6;
+  font-weight: 600;
+}
+
+.page a.primary-button {
+  margin-top: 40px;
+}
+
+.page a.secondary-button {
+  margin-top: 20px;
+}
+
+.title-login {
+  font-size: 32px;
+  width: 230px;
+  text-align: center;
+  color: #3ABAD6;
+  margin-bottom: 40px;
+  font-family: Poppins Regular;
+}
+
+.email,
+.password,
+.user {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 270px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+  -webkit-box-shadow: 1px 2px 8px #3b3b3b3d;
+          box-shadow: 1px 2px 8px #3b3b3b3d;
+  margin: 10px 0px;
+}
+
+.email img {
+  width: 18px;
+  margin-left: 4px;
+}
+
+.password img {
+  width: 12px;
+  margin-left: 4px;
+}
+
+#eye {
+  width: 16px;
+  cursor: pointer;
+}
+
+#email-input,
+#password-input,
+#user-input,
+#passwordr-input {
+  border: none;
+  margin: 0px 10px;
+  color: #969696;
+  width: 190px;
+  height: 32px;
+}
+
+#email-input::-webkit-input-placeholder,
+#password-input::-webkit-input-placeholder,
+#user-input::-webkit-input-placeholder,
+#passwordr-input::-webkit-input-placeholder {
+  color: #969696;
+}
+
+#email-input:-ms-input-placeholder,
+#password-input:-ms-input-placeholder,
+#user-input:-ms-input-placeholder,
+#passwordr-input:-ms-input-placeholder {
+  color: #969696;
+}
+
+#email-input::-ms-input-placeholder,
+#password-input::-ms-input-placeholder,
+#user-input::-ms-input-placeholder,
+#passwordr-input::-ms-input-placeholder {
+  color: #969696;
+}
+
+#email-input::placeholder,
+#password-input::placeholder,
+#user-input::placeholder,
+#passwordr-input::placeholder {
+  color: #969696;
+}
+
+input.primary-button {
+  margin: 30px 5px 5px 5px;
+}
+
+.link-a,
+.link-b {
+  font-size: 14px;
+}
+
+.link-a {
+  margin-top: 10px;
+  cursor: default;
+}
+
+.link-b {
+  color: #3ABAD6;
+}
+
+.link-b:hover {
+  text-decoration: underline;
+}
+
+.password-forgot {
+  font-size: 12px;
+  width: 250px;
+  text-align: end;
+}
+
+.password-forgot:hover {
+  font-weight: 600;
+}
+
+.title-cadastro {
+  font-size: 32px;
+  width: 230px;
+  text-align: center;
+  color: #3ABAD6;
+  margin-bottom: 40px;
+  font-family: Poppins Regular;
+}
+
+.user img {
+  width: 14px;
+  margin-left: 4px;
+}
+
+.doingit-logo {
+  width: 280px;
+  margin: 0px 0px 30px 0px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.transition {
+  -webkit-animation: animate 300ms ease-in forwards;
+          animation: animate 300ms ease-in forwards;
+}
+
+@-webkit-keyframes animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

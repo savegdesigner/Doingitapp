@@ -1,0 +1,54 @@
+@media (max-width: 520px){
+
+    .doingit-logo{
+        margin: 0px;
+    }
+
+    .email,
+    .password,
+    .user{
+        margin: 4px;
+    }
+
+    .link-a,
+    .link-b{
+        margin: 0px;
+    }
+
+}
+
+@media (max-height: 570px){
+
+    .title-login{
+        margin: 3px;
+    }
+
+    .doingit-logo{
+        margin: 0;
+    }
+
+    .primary-button,
+    .secondary-button{
+        margin: 6px!important;
+    }
+
+    .title-login{
+        margin: 0px 0px 5px 0px;
+    }
+
+    .title-cadastro{
+        margin: 0px 0px 5px 0px;
+    }
+
+    .doingit-logo{
+        width: 220px;
+    }
+
+
+}
+
+@media (max-height: 490){
+    .doingit-logo{
+        width: 180px;
+    }
+}
