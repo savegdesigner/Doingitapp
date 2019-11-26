@@ -4,4 +4,4 @@
 
 ## Crie e planeje suas listas de tarefas! 
 
-### Autor: **_Vinicius Savegnago_**
+### Autor: [**_Vinicius Savegnago_**](https://www.instagram.com/vsgdesigner/)
