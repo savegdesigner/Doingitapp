@@ -17,10 +17,10 @@ if(isset($_SESSION['userUid'])){
     <title>DoingIt - Faça sua lista de tarefas</title>
 
     <!-- CSS Links -->
-    <!-- Reset -->
-    <link rel="stylesheet" href="css/reset.css">
     <!-- Main Layout, Grid -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
     <!-- Media -->
     <link rel="stylesheet" href="css/media.css">
     

@@ -2,6 +2,8 @@
 
 session_start();
 
+$list_name = '';
+$update = false;
 
 ?>
 
@@ -77,21 +79,21 @@ session_start();
 
 
                                         echo "
-                                            <form method='POST' action='./servidor/delete.php' class='list'>
+                                            <section  class='list'>
 
                                                 <div class='content'>
                                                 <h3>{$data['list_name']}</h3>
-                                                <a href='#'><img src='./imgs/icons/edit-button.svg' alt='Editar Lista' class='edit-button'></a>
+                                                <a href='./servidor/edit.php?edit_id={$data['id']}'><img src='./imgs/icons/edit-button.svg' alt='Editar Lista' class='edit-button'></a>
                                                 </div>
                     
-                                                <button type='submit' class='delete' value={$data['id']} name='delete-button'><img src='./imgs/icons/delete-button.svg' alt='Deletar Lista' class='delete-button'></button>
+                                                <a href='./servidor/delete.php?delete_id={$data['id']}' class='delete'><img src='./imgs/icons/delete-button.svg' alt='Deletar Lista' class='delete-button'></a>
                     
-                                            </form>
+                                            </section>
                                         ";
 
                                     }
+                                }
                             }
-                        }
                     
                         ?>
 
@@ -99,8 +101,20 @@ session_start();
                         <h2>Adicionar nova lista</h2>
 
                         <form method="POST" action="./servidor/add-list.php" class="add">
-                            <input type="text" class="new-list-input" name="new-list">
-                            <button type="submit" class="submit-button" name="add-list-button"><img src="./imgs/icons/add-button.svg" alt="Adicionar nova lista" class="add-button"></button>
+
+                            <input type="text" class="new-list-input" name="new-list" placeholder="Fazer compras..." value="<?php echo "$list_name"; ?>">
+                                <?php 
+                        
+                                    if($update){
+                                        echo "<button type='submit' class='submit-button' name='add-list-button'><img src='./imgs/icons/update-button.svg' alt'Adicionar nova lista' class='add-button'></button>";
+                                    
+                                    }else{
+                                        echo "<button type='submit' class='submit-button' name='add-list-button'><img src='./imgs/icons/add-button.svg' alt'Adicionar nova lista' class='add-button'></button>";
+                                    
+                                    }
+
+                                ?>
+                            
                         </form>
                         
                     </div>

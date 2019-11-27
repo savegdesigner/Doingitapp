@@ -2,17 +2,16 @@
 
 require './connection.php';
 
-if(isset($_POST['delete-button'])){
+if(isset($_GET['delete_id'])){
 
-	if(is_numeric($_POST['delete-button'])){
+	$sql = mysqli_prepare( $conn, 'DELETE FROM lists WHERE id = ?');
+	mysqli_stmt_bind_param(	$sql, 'i', $_GET['delete_id']);
 
-		$prep2 = mysqli_prepare( $conn, 'DELETE FROM lists WHERE id = ?');
-		mysqli_stmt_bind_param(	$prep2, 'i', $_POST['delete-button']);
-
-        mysqli_stmt_execute($prep2);
+	mysqli_stmt_execute($sql);
         
-        header('Location: ../inicio-pagina.php?listdeleted');
+	header('Location: ../inicio-pagina.php?listdeleted');
 
-	} 
+}else{
+	header('Location: ../inicio-pagina.php?cannotdelete');
 
 }
