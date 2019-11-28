@@ -152,7 +152,7 @@ h3{
 }
 
 .delete-button{
-    margin: 0px 10px;
+    margin: 0px 0px 0px 10px;
     width: 50px;
     cursor: pointer;
 }
@@ -160,7 +160,7 @@ h3{
 .add-button{
     width: 50px;
     cursor: pointer;
-    margin: 0px 10px;
+    margin: 0px 0px 0px 10px;
 }
 
 

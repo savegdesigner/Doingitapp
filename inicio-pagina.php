@@ -102,11 +102,22 @@ $update = false;
 
                         <form method="POST" action="./servidor/add-list.php" class="add">
 
-                            <input type="text" class="new-list-input" name="new-list" placeholder="Fazer compras..." value="<?php echo "$list_name"; ?>">
+                            <input type="text" class="new-list-input" name="new-list" id="list-input"
+                            placeholder="Fazer compras..." 
+                            value="<?php 
+                            
+                                        if(isset($_GET['listupdateid'])){
+
+                                            $list_name = $_GET['listupdatename'];
+                                            $list_id = $_GET['listupdateid'];
+                                            $update = true;
+
+                                            } 
+                                            echo $list_name; ?>">
                                 <?php 
                         
                                     if($update){
-                                        echo "<button type='submit' class='submit-button' name='add-list-button'><img src='./imgs/icons/update-button.svg' alt'Adicionar nova lista' class='add-button'></button>";
+                                        echo "<a href='./servidor/edit.php?update=$list_id&update_name={}' class='submit-button' name='update-list-button'><img src='./imgs/icons/update-button.svg' alt'Atualizar uma lista' class='add-button'></a>";
                                     
                                     }else{
                                         echo "<button type='submit' class='submit-button' name='add-list-button'><img src='./imgs/icons/add-button.svg' alt'Adicionar nova lista' class='add-button'></button>";
