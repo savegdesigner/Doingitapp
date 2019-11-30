@@ -1,8 +1,5 @@
 var xmlhttp = new XMLHttpRequest()
 
-xmlhttp.open('GET', '../servidor/listagem-inicio.php', true)
-xmlhttp.send()
-
 xmlhttp.onreadystatechange = function(){
     if(xmlhttp.readyState == 1){
         resultado_p = document.createElement('p')
@@ -14,10 +11,15 @@ xmlhttp.onreadystatechange = function(){
 
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
         
-        var response = xmlhttp.responseText
-        console.log(response)
+        var response = xmlhttp.response
 
+        var lists = document.getElementById('lists')
+
+        lists.innerHTML = response;
 
     }
 
 }
+
+xmlhttp.open('GET', 'servidor/listagem-inicio.php', true)
+xmlhttp.send()
