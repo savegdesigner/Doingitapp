@@ -25,6 +25,8 @@ $update = false;
     <!-- Media -->
     <link rel="stylesheet" href="css/media.css">
 
+    <script defer src="./js/ajax-main.js"></script>
+
 </head>
 <body>
 
@@ -54,7 +56,9 @@ $update = false;
                         <h1>Minhas Listas</h1>
                     </div>
 
-                    <div class="lists">
+                    <div class="lists" id="lists">
+
+                    <!-- <p id="resultado"></p> -->
 
                         <?php  
 
@@ -109,15 +113,17 @@ $update = false;
                                         if(isset($_GET['listupdateid'])){
 
                                             $list_name = $_GET['listupdatename'];
-                                            $list_id = $_GET['listupdateid'];
                                             $update = true;
 
                                             } 
                                             echo $list_name; ?>">
+
+                            <input type="hidden" name="updatelistid" value="<?php echo $_GET['listupdateid']; ?>">
+
                                 <?php 
                         
                                     if($update){
-                                        echo "<a href='./servidor/edit.php?update=$list_id&update_name={}' class='submit-button' name='update-list-button'><img src='./imgs/icons/update-button.svg' alt'Atualizar uma lista' class='add-button'></a>";
+                                        echo "<button type='submit' class='submit-button' name='update-list-button'><img src='./imgs/icons/update-button.svg' alt'Atualizar uma lista' class='add-button'></button>";
                                     
                                     }else{
                                         echo "<button type='submit' class='submit-button' name='add-list-button'><img src='./imgs/icons/add-button.svg' alt'Adicionar nova lista' class='add-button'></button>";

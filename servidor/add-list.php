@@ -2,6 +2,7 @@
 
 session_start();
 
+// Adding a new list
 if(isset($_POST['add-list-button'])){
 
     require 'connection.php';
@@ -32,8 +33,37 @@ if(isset($_POST['add-list-button'])){
         mysqli_close($conn);
 
     }
+
+// Updating selected list name
 }else{
-    header('Location: ../inicio-pagina.php?addlist=failed');
-    exit();
+    if(isset($_POST['update-list-button'])){
+
+        require 'connection.php';
+    
+        $list_id = $_POST['updatelistid'];
+        $list_name = $_POST['new-list'];
+    
+        if(empty($list_name)){
+            header("Location: ../inicio-pagina.php?error=emptyfield");
+            exit();
+    
+        }else{
+            $sql = mysqli_prepare( $conn, 'UPDATE lists SET list_name = ? WHERE id = ?');
+            mysqli_stmt_bind_param(	$sql, 'si', $list_name, $list_id);
+        
+            mysqli_stmt_execute($sql);
+        
+            $update = false;
+        
+            header("Location: ../inicio-pagina.php?updatedlist=success");
+            exit();
+    
+        }
+    
+    }else{
+        header("Location: ../inicio-pagina.php?updatelist=failed");
+        exit();
+
+    }
 
 }

@@ -4,6 +4,7 @@ session_start();
 
 require './connection.php';
 
+// Getting list id & name and sending through URL for Update
 if(isset($_GET['edit_id'])){
 
     $sql = mysqli_prepare( $conn, 'SELECT * FROM lists WHERE id = ?');
@@ -26,30 +27,5 @@ if(isset($_GET['edit_id'])){
 
 }else{
     header('Location: ../inicio-pagina.php?cannotedit');
-
-}
-
-if(isset($_GET['update'])){
-
-    $list_name = $_GET['update_name'];
-    $list_id = $_GET['update'];
-
-    if(empty($list_name)){
-        header("Location: ../inicio-pagina.php?error=emptyfield");
-        exit();
-
-    }else{
-        $sql = mysqli_prepare( $conn, 'UPDATE lists SET list_name = ? WHERE id = ?');
-        mysqli_stmt_bind_param(	$sql, 'si', $list_name, $list_id);
-    
-        mysqli_stmt_execute($sql);
-    
-        $update = false;
-    
-        header("Location: ../inicio-pagina.php?updatedlist=success");
-        exit();
-
-    }
-
 
 }
