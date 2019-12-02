@@ -25,7 +25,8 @@ $update = false;
     <!-- Media -->
     <link rel="stylesheet" href="css/media.css">
 
-    <script src="./js/ajax-main.js"></script>
+    <script defer src="./js/ajax-main.js"></script>
+    <script defer src="./js/popup-ajax.js"></script>
 
 </head>
 <body>
@@ -95,6 +96,32 @@ $update = false;
                         
                     </div>
             
+
+                </div>
+
+                <div class="rateus">
+
+                <img class="rateus-icon" src="./imgs/icons/rateus-icon.svg" alt="Rate us Icon">
+
+                <i class="close-rateus"><img src="./imgs/icons/close-icon.svg" alt="Close rate us"></i>
+
+                    <div class="wrapper" id="rateus-wrapper">
+
+                        <h3>Avalie sua experiência</h3>
+
+                        <p>Como gostaria de nos avaliar?</p>
+
+                        <div class="rate-stars">
+                            <i class="star" id="star-1"><img src="./imgs/icons/star.svg" alt="1 Estrela"></i>
+                            <i class="star" id="star-2"><img src="./imgs/icons/star.svg" alt="2 Estrelas"></i>
+                            <i class="star" id="star-3"><img src="./imgs/icons/star.svg" alt="3 Estrelas"></i>
+                            <i class="star" id="star-4"><img src="./imgs/icons/star.svg" alt="4 Estrelas"></i>
+                            <i class="star" id="star-5"><img src="./imgs/icons/star.svg" alt="5 Estrelas"></i>
+                        </div>
+
+                        <span class="notnow">agora não</span>
+
+                    </div>
 
                 </div>
 

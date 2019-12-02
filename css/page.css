@@ -35,12 +35,12 @@ nav{
 }
 
 .todo-box{
-    width: 70%;
+    width: 80%;
     max-width: 800px;
     height: 600px;
     border: 1px solid rgba(59, 59, 59, 0.13);
     border-radius: 6px;
-    box-shadow: 0px 4px 18px rgba(27, 27, 27, 0.224);
+    box-shadow: 0px 4px 18px rgba(27, 27, 27, 0.164);
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -187,6 +187,7 @@ h3{
     width: 55px;
 }
 
+
 /* Utls */
 
 #resultado{
@@ -195,4 +196,78 @@ h3{
     font-family: 'Poppins';
     font-size: 18px;
     color: rgb(46, 146, 168);
+}
+
+/* Rate us Box */
+
+.rateus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 230px;
+    height: 210px;
+    position: absolute;
+    top: 75%;
+    right: 5%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: -2px 6px 20px #22212127;
+    text-align: center;
+    transition: 200ms ease-in-out;
+    display: none;
+    border-radius: 4px;
+}
+
+.wrapper{
+    margin: 0;
+    padding: 0;
+}
+
+.rateus p, .rateus h3{
+    font-family: 'Poppins';
+    color: #3B3B3B;
+    cursor: default;
+}
+
+.rateus p {
+    font-size: 14px;
+}
+
+.rateus span{
+    font-family: 'Poppins';
+    color: #EC5569;
+    font-size: 18px;
+}
+
+.rateus .notnow{
+    font-family: 'Poppins';
+    color: #a8a8a8;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 20px 0px 0px 0px;
+    text-decoration: underline;
+}
+
+.rate-stars{
+    margin-top: 5px;
+}
+
+.rateus-icon{
+    position: absolute;
+    top: -20px;
+    right: 90px;
+}
+
+.close-rateus{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+}
+
+.star{
+    cursor: pointer;
 }
