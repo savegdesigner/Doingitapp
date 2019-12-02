@@ -20,8 +20,6 @@ if(isset($_SESSION['userUid'])){
     <script defer src="js/main.js"></script>
     <script defer src="js/transition.js"></script>
     <!-- CSS Links -->
-    <!-- Font Style -->
-    <link rel="stylesheet" href="css/font.css">
     <!-- Reset -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Main Layout, Grid -->

@@ -17,7 +17,7 @@ window.onload = () => {
         
         rateus_div.style.display = 'flex'
         
-    }, 1000)
+    }, 10000)
 
 }
 
@@ -66,11 +66,19 @@ function sendAjax(data){
         
             var response = JSON.parse(xmlhttp.response)
 
-            rateus_wrapper_div.style.display = 'none'
+            if(response){
 
-            var response_span = document.createElement('span')
-            response_span.innerHTML = response
-            rateus_div.appendChild(response_span)
+                rateus_wrapper_div.style.display = 'none'
+
+                var response_span = document.createElement('span')
+                response_span.innerHTML = response
+                rateus_div.appendChild(response_span)
+
+                setTimeout(() => {
+                    rateus_div.style.display = 'none'
+
+                }, 2000)
+            }
     
         }
     }
