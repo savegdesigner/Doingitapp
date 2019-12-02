@@ -31,6 +31,8 @@ if(isset($_SESSION['userUid'])){
         <!-- <h1 class="title-index">Bem vindo</h1> -->
         <img src="imgs/icons/doingit-logo.svg" alt="DoingIt Logo" class="doingit-logo">
 
+        <h1 class="about">Crie e planeje suas listas de tarefas!</h1>
+
         <a href="login-pagina.php"class="primary-button">Login</a>
         <a href="cadastro-pagina-ajax.php" class="secondary-button">Criar uma conta</a>
     </main>

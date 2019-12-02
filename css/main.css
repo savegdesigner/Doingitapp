@@ -95,6 +95,13 @@
   margin-top: 20px;
 }
 
+.about{
+  font-family: 'Poppins';
+  color: #3ABAD6;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
 .title-login {
   font-size: 32px;
   width: 230px;
