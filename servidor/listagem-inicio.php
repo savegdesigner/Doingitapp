@@ -36,7 +36,12 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
             ";
 
         }
-    }
+        }else{
+            echo "
+            <img src='imgs/icons/doingit-logo.svg' alt='DoingIt Logo' class='doingit-logo'>
+            ";
+        
+        }
 }
 
 ?>

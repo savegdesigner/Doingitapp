@@ -40,15 +40,17 @@
 }
 
 .error {
-  color: #ee6a6a;
+  color: #fa8b8b;
   font-size: 16px;
   margin: 10px 0px;
+  font-family: 'Poppins';
 }
 
 .success {
-  color: #81d381;
+  color: #54c054;
   font-size: 16px;
   margin: 10px 0px;
+  font-family: 'Poppins';
 }
 
 .page {
@@ -230,6 +232,11 @@ input.primary-button {
   text-align: center;
   color: #3ABAD6;
   margin-bottom: 40px;
+  font-family: 'Poppins';
+}
+
+#resultado{
+  color: #3ABAD6;
   font-family: 'Poppins';
 }
 

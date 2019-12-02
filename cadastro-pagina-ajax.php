@@ -10,6 +10,7 @@ if(isset($_SESSION['userUid'])){
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +18,8 @@ if(isset($_SESSION['userUid'])){
     <title>DoingIt - Faça sua lista de tarefas</title>
 
     <!-- Scripts -->
-    <script defer src="js/main.js"></script>
     <script defer src="js/transition.js"></script>
     <!-- CSS Links -->
-    <!-- Font Style -->
-    <link rel="stylesheet" href="css/font.css">
     <!-- Reset -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Main Layout, Grid -->
@@ -29,13 +27,17 @@ if(isset($_SESSION['userUid'])){
     <!-- Media -->
     <link rel="stylesheet" href="css/media.css">
 
+    <script defer src="./js/ajax-cadastro.js"></script>
+
 </head>
+
 <body>
 
-
-    <form class="page hide" action="servidor/login.php" method="POST" wrapper>
+    <form id="register-form" class="page hide" action="servidor/cadastro.php" method="POST" wrapper>
     <img src="imgs/icons/doingit-logo.svg" alt="DoingIt Logo" class="doingit-logo">
-        <h1 class="title-login">Entrar</h1>
+        <h1 class="title-cadastro">Cadastre-se</h1>
+
+        <p id="resultado"></p>
 
         <?php
 
@@ -46,33 +48,46 @@ if(isset($_SESSION['userUid'])){
                 }else if($_GET['error'] == "invalidemail"){
                         echo '<span class="error">E-mail inválido</span>';
 
-                }else if($_GET['error'] == "wrongpassword"){
-                    echo '<span class="error">Senha inválida</span>';
+                }else if($_GET['error'] == "passwordmatch"){
+                    echo '<span class="error">Senhas diferentes</span>';
 
-                }
-            }else if(isset($_GET['signup'])){
-                echo '<span class="success">Cadastrado com sucesso</span>';
+                }else if($_GET['error'] == "invalidusername"){
+                    echo '<span class="error">Usuário inválido</span>';
+
+                }else if($_GET['error'] == "usertaken"){
+                    echo '<span class="error">Usuário já cadastrado</span>';
+
             }
+        }
 
         ?>
+
+        <div class="user">
+            <img src="imgs/icons/user-icon.svg" alt="E-mail Icon">
+            <input type="text" id="user-input" placeholder="Usuário" name="username">
+        </div>
 
         <div class="email">
             <img src="imgs/icons/email-icon.svg" alt="E-mail Icon">
             <input type="email" id="email-input" placeholder="E-mail" name="email">
         </div>
-        
+
         <div class="password">
             <img src="imgs/icons/password-icon.svg" alt="Password Icon">
             <input type="password" id="password-input" placeholder="Senha" name="password">
-            <img src="imgs/icons/eye-icon-hide.svg" alt="Eye Icon" id="eye">
         </div>
-            <a href="#" class="password-forgot">Esqueceu a senha?</a>
 
-        <input type="submit" class="primary-button" value="Login" name="login-submit">
+        <div class="password">
+            <img src="imgs/icons/password-icon.svg" alt="Password Icon">
+            <input type="password" id="passwordr-input" placeholder="Repita a senha" name="passwordr">
+        </div>
 
-        <p class="link-a">Não possui uma conta?</p>
-        <a href="cadastro-pagina-ajax.php" class="link-b">Cadastre-se aqui</a>
+        <input type="submit" class="primary-button" value="Cadastrar" name="cadastro-submit" id="register-submit">
+
+        <p class="link-a">Já possui uma conta?</p>
+        <a href="login-pagina.php" class="link-b">Entre aqui</a>
     </form>
-    
+
 </body>
+
 </html>

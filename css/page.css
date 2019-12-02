@@ -65,11 +65,15 @@ nav{
     width: 100%;
     padding: 20px 10px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
 .list{
     width: 100%;
-    margin: 10px 0px;
+    margin: 5px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,6 +132,11 @@ h3{
     border: 1px solid rgba(37, 36, 36, 0.093);
     box-shadow: 0px 6px 20px rgba(59, 59, 59, 0.128);
     font-size: 16px;
+}
+
+.welcome{
+    font-family: 'Poppins';
+    color: #3B3B3B;
 }
 
 

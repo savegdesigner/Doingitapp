@@ -32,7 +32,7 @@ if(isset($_SESSION['userUid'])){
         <img src="imgs/icons/doingit-logo.svg" alt="DoingIt Logo" class="doingit-logo">
 
         <a href="login-pagina.php"class="primary-button">Login</a>
-        <a href="cadastro-pagina.php" class="secondary-button">Criar uma conta</a>
+        <a href="cadastro-pagina-ajax.php" class="secondary-button">Criar uma conta</a>
     </main>
     
 </body>
