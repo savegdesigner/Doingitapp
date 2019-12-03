@@ -4,13 +4,11 @@ session_start();
 
 require './connection.php';
 
-$sql = "SELECT * FROM lists WHERE id_user=?";
+$sql = "SELECT * FROM tasks WHERE user_id=?";
 $stmt = mysqli_stmt_init($conn); 
 
 if(!mysqli_stmt_prepare($stmt, $sql)){
-    header("Location: ../login-pagina.php?error=pageloadsql");
-    mysqli_stmt_close($conn);
-    exit();
+    echo "Erro no SQL";
 
 }else{
         mysqli_stmt_bind_param($stmt, 'i', $_SESSION['userId']);
@@ -26,11 +24,12 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
                 <section  class='list'>
 
                     <div class='content'>
-                    <h3 class='list-title-name' data-listid='{$data['id']}'>{$data['list_name']}</h3>
-                    <a href='./servidor/edit.php?edit_id={$data['id']}'><img src='./imgs/icons/edit-button.svg' alt='Editar Lista' class='edit-button'></a>
+                        <input type='checkbox' class='task-check' id='task'>
+                        <label class='task-name'>{$data['task_name']}</label>
+                        <a href='./servidor/edit-task.php?edit_id={$data['task_id']}'><img src='./imgs/icons/edit-button.svg' alt='Editar Lista' class='edit-button'></a>
                     </div>
 
-                    <a href='./servidor/delete.php?delete_id={$data['id']}' class='delete'><img src='./imgs/icons/delete-button.svg' alt='Deletar Lista' class='delete-button'></a>
+                    <a href='./servidor/delete-task.php?delete_id={$data['task_id']}' class='delete'><img src='./imgs/icons/delete-button.svg' alt='Deletar Lista' class='delete-button'></a>
 
                 </section>
             ";

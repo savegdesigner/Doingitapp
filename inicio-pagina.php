@@ -27,6 +27,7 @@ $update = false;
 
     <script defer src="./js/ajax-main.js"></script>
     <script defer src="./js/popup-ajax.js"></script>
+    <script defer src="./js/task-redirect.js"></script>
 
 </head>
 <body>
