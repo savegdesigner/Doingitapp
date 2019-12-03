@@ -26,7 +26,7 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
                 <section  class='list'>
 
                     <div class='content'>
-                    <h3 class='list-title-name' data-listid='{$data['id']}'>{$data['list_name']}</h3>
+                    <a href='./tasks.php?listid={$data['id']}&listname={$data['list_name']}' class='list-title-name' data-listid='{$data['id']}'>{$data['list_name']}</a>
                     <a href='./servidor/edit.php?edit_id={$data['id']}'><img src='./imgs/icons/edit-button.svg' alt='Editar Lista' class='edit-button'></a>
                     </div>
 

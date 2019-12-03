@@ -27,7 +27,6 @@ $update = false;
 
     <script defer src="./js/ajax-main.js"></script>
     <script defer src="./js/popup-ajax.js"></script>
-    <script defer src="./js/task-redirect.js"></script>
 
 </head>
 <body>
@@ -96,6 +95,11 @@ $update = false;
                         </form>
                         
                     </div>
+
+                    <div class="route">
+                        <a href="#" class="back-to-start"><img src="./imgs/icons/lists-icon.svg" alt="Voltar para as listas"></a>
+                        <a href="#" class="back-to-tasks"><img src="./imgs/icons/tasks-icon.svg" alt="Voltar para as listas"></a>           
+                    </div>
             
 
                 </div>
@@ -108,7 +112,7 @@ $update = false;
 
                     <div class="wrapper" id="rateus-wrapper">
 
-                        <h3>Avalie sua experiência</h3>
+                        <h2 class="rateus-title">Avalie sua experiência</h2>
 
                         <p>Como gostaria de nos avaliar?</p>
 

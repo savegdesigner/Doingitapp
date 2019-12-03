@@ -1,5 +1,9 @@
 var xmlhttp = new XMLHttpRequest()
 
+var listid = document.getElementById('listid').value
+var listname = document.getElementById('listname').value
+
+
 xmlhttp.onreadystatechange = function(){
     if(xmlhttp.readyState == 1){
         resultado_p = document.createElement('p')
@@ -21,5 +25,5 @@ xmlhttp.onreadystatechange = function(){
 
 }
 
-xmlhttp.open('GET', 'servidor/listagem-inicio-tasks.php', true)
+xmlhttp.open('GET', `servidor/listagem-inicio-tasks.php?listid=${listid}&listname=${listname}`, true)
 xmlhttp.send()

@@ -4,6 +4,9 @@ session_start();
 
 require './connection.php';
 
+$list_id = $_GET['listid'];
+$list_name = $_GET['listname'];
+
 // Getting list id & name and sending through URL for Update
 if(isset($_GET['edit_id'])){
 
@@ -17,15 +20,14 @@ if(isset($_GET['edit_id'])){
     if($result->num_rows >= 1){
         $data = $result->fetch_assoc();
 
-        // $update = true;
         $task_name = $data['task_name'];
         $task_id = $data['task_id'];
 
-        header("Location: ../tasks.php?taskupdateid=$task_id&taskupdatename=$task_name");
+        header("Location: ../tasks.php?listid=$list_id&listname=$list_name&taskupdateid=$task_id&taskupdatename=$task_name");
 
         }
 
 }else{
-    header('Location: ../tasks.php?cannotedit');
+    header("Location: ../tasks.php?cannotedit&listid=$list_id&listname=$list_name");
 
 }

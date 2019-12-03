@@ -2,6 +2,9 @@
 
 session_start();
 
+$list_id = $_POST['listid'];
+$list_name = $_POST['listname'];
+
 // Adding a new task
 if(isset($_POST['add-task-button'])){
 
@@ -11,7 +14,7 @@ if(isset($_POST['add-task-button'])){
     $list_id = $_POST['listid'];
 
     if(empty($task_name)){
-        header("Location: ../tasks.php?error=emptyfield");
+        header("Location: ../tasks.php?error=emptyfield&listid=$list_id&listname=$list_name");
         exit();
 
     }else{
@@ -19,14 +22,14 @@ if(isset($_POST['add-task-button'])){
         $stmt = mysqli_stmt_init($conn);
 
         if(!mysqli_stmt_prepare($stmt, $sql)){
-            header("Location: ../tasks.php?error=sql");
+            header("Location: ../tasks.php?error=sql&listid=$list_id&listname=$list_name");
             exit();
 
         }else{
 
             mysqli_stmt_bind_param($stmt, "sii", $task_name, $list_id, $_SESSION['userId']);
             mysqli_stmt_execute($stmt);
-            header("Location: ../tasks.php?addtask=success");
+            header("Location: ../tasks.php?addtask=success&listid=$list_id&listname=$list_name");
             exit();
 
         }
@@ -45,7 +48,7 @@ if(isset($_POST['add-task-button'])){
         $task_name = $_POST['new-task'];
     
         if(empty($task_name)){
-            header("Location: ../tasks.php?error=emptyfield");
+            header("Location: ../tasks.php?error=emptyfield&listid=$list_id&listname=$list_name");
             exit();
     
         }else{
@@ -56,13 +59,13 @@ if(isset($_POST['add-task-button'])){
         
             // $update = false;
         
-            header("Location: ../tasks.php?updatedtask=success");
+            header("Location: ../tasks.php?updatedtask=success&listid=$list_id&listname=$list_name");
             exit();
     
         }
     
     }else{
-        header("Location: ../tasks.php?updatetask=failed");
+        header("Location: ../tasks.php?updatetask=failed&listid=$list_id&listname=$list_name");
         exit();
 
     }

@@ -2,7 +2,6 @@
 
 session_start();
 
-$list_name = '';
 $update = false;
 
 ?>
@@ -53,7 +52,7 @@ $update = false;
     
                 <div class="todo-box">
                     <div class="list-title">
-                        <h1>Minhas Tarefas</h1>
+                        <h1><?php echo $_GET['listname']; ?></h1>
                     </div>
 
                     <div class="lists" id="tasks">
@@ -77,7 +76,8 @@ $update = false;
                                             } 
                                     ?>">
 
-                            <input type="hidden" name="listid" value="<?php echo $_GET['listid']; ?>">
+                            <input type="hidden" id="listname" name="listname" value="<?php echo $_GET['listname']; ?>">
+                            <input type="hidden" id="listid" name="listid" value="<?php echo $_GET['listid']; ?>">
                             <input type="hidden" name="updatetaskid" value="<?php echo $_GET['taskupdateid']; ?>">
 
                                 <?php 
@@ -96,7 +96,10 @@ $update = false;
                         
                     </div>
             
-
+                    <div class="route">
+                        <a href="./inicio-pagina.php" class="back-to-start"><img src="./imgs/icons/lists-icon.svg" alt="Voltar para as listas"></a>
+                        <a href="#" class="back-to-tasks"><img src="./imgs/icons/tasks-icon.svg" alt="Voltar para as listas"></a>           
+                    </div>
                 </div>
 
 
