@@ -9,17 +9,9 @@ $email = $user_data->email;
 $password = $user_data->password;
 $passwordr = $user_data->passwordr;
 
-// echo "$username";
-
-// if(isset($_POST['cadastro-submit'])){
 if(isset($user_data)){
 
     require 'connection.php';
-
-    // $username = $_POST['username'];
-    // $email = $_POST['email'];
-    // $password = $_POST['password'];
-    // $passwordr = $_POST['passwordr'];
 
     if(empty($username) || empty($email) || empty($password) || empty($passwordr)){
         // header("Location: ../cadastro-pagina-ajax.php?error=emptyfields&uid=".$username."&email=".$email);
