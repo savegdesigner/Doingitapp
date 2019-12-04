@@ -99,7 +99,7 @@ $update = false;
             
                     <div class="route">
                         <a href="./inicio-pagina.php" class="back-to-start"><img src="./imgs/icons/lists-icon.svg" alt="Voltar para as listas"></a>
-                        <a href="#" class="back-to-tasks"><img src="./imgs/icons/tasks-icon.svg" alt="Voltar para as listas"></a>           
+                        <a href="#" class="unset"><img src="./imgs/icons/tasks-icon.svg" alt="Voltar para as listas"></a>           
                     </div>
                 </div>
 

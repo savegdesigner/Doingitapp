@@ -2,14 +2,13 @@ window.onload = () => {
 
     // Cache DOM
     var task_check = document.querySelectorAll('.task-check')
-
     // Check if completed to set style
     task_check.forEach(check => {
         var complete = check.getAttribute('data-complete')
 
         if (complete == 1) {
             // Setting style to COMPLETED checkbox
-            check.style.backgroundColor = '#2e92a8'
+            check.classList.add('complete')
 
         }
 
@@ -22,6 +21,8 @@ window.onload = () => {
             var data = {
                 "task": label_id
             }
+
+            check.classList.toggle('complete')
 
             userData = JSON.stringify(data)
 
@@ -45,7 +46,7 @@ function sendAjax(data) {
         }
 
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var response = JSON.parse(xmlhttp.response)
+            var response = xmlhttp.response
 
             console.log(response)
 

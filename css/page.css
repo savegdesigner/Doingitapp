@@ -145,6 +145,7 @@ nav{
     margin: 0px 0px 0px 25px;
     font-family: 'Poppins';
     color: white;
+    font-size: 16px;
 }
 
 .route{
@@ -158,10 +159,17 @@ nav{
 
 .back-to-start{
     margin: 0px 15px;
+    transition: 200ms ease;
+}
+
+.back-to-start:hover,
+.back-to-tasks:hover{
+    transform: translateY(-5px);
 }
 
 .back-to-tasks{
     margin: 0px 15px;
+    transition: 200ms ease;
 }
 
 
@@ -206,10 +214,9 @@ nav{
     width: 20px;
     height: 20px;
     border-radius: 2px;
-    background-color: white;
-    border: 1px solid #3b3b3b80;
     outline: none;
     cursor: pointer;
+    border: 1px solid white;
 }
 
 
@@ -235,6 +242,40 @@ nav{
     color: #2e92a8;
 }
 
+.complete{
+    background-image: url("../imgs/icons/completed2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.unset{
+    opacity: 0.5;
+    margin: 0px 15px;
+}
+
+.route-span-wrapper{
+    display: none;
+    position: absolute;
+    top: -22px;
+    right: 160px;
+    padding: 0px 10px;
+    filter: drop-shadow(-3px 3px 6px rgba(43, 43, 40, 0.250));
+    transition: 200ms ease-in-out;
+    text-align: center;
+}
+
+.route-span{
+    padding: 0px 10px 10px 10px;
+    width: 100px;
+    height: 90px;
+    font-family: 'Poppins';
+    background: #3ABAD6;
+    color: white;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 66% 75%, 34% 100%, 35% 75%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 66% 75%, 34% 100%, 35% 75%, 0% 75%);
+}
+
 
 /* Rate us Box */
 
@@ -257,6 +298,10 @@ nav{
     transition: 200ms ease-in-out;
     display: none;
     border-radius: 4px;
+}
+
+.rateus:hover{
+    transform: translateY(-7px);
 }
 
 .wrapper{

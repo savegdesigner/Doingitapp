@@ -9,7 +9,6 @@ $data = json_decode($json_response);
 $task_id = $data->task;
 
 
-
 if(isset($task_id)){
 
     require 'connection.php';
@@ -19,16 +18,20 @@ if(isset($task_id)){
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
+        mysqli_stmt_close($conn);
         echo "Erro no servidor";
 
     }else{
         mysqli_stmt_bind_param($stmt, "i", $task_id);
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_store_result($stmt);
 
         $result = $stmt->get_result();
+        
+        $dataResult = $result->fetch_assoc();
 
-        if($result == 0){
+        // echo $dataResult['task_complete'];
+
+        if($dataResult['task_complete'] == 0){
 
             $sql = "UPDATE tasks SET task_complete = ? WHERE task_id = ?";
 
@@ -44,7 +47,6 @@ if(isset($task_id)){
     
                 $message = "complete";
                 echo json_encode($message);
-                exit();
     
                 }
 
@@ -63,7 +65,6 @@ if(isset($task_id)){
     
                 $message = "incomplete";
                 echo json_encode($message);
-                exit();
 
             }
 

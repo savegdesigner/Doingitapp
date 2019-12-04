@@ -27,6 +27,7 @@ $update = false;
 
     <script defer src="./js/ajax-main.js"></script>
     <script defer src="./js/popup-ajax.js"></script>
+    <script defer src="./js/link-unavailable.js"></script>
 
 </head>
 <body>
@@ -97,7 +98,11 @@ $update = false;
                     </div>
 
                     <div class="route">
-                        <a href="#" class="back-to-start"><img src="./imgs/icons/lists-icon.svg" alt="Voltar para as listas"></a>
+                        <div class="route-span-wrapper">
+                            <span class="route-span">Selecione uma lista</span>
+                        </div>
+                        
+                        <a href="#" class="unset"><img src="./imgs/icons/lists-icon.svg" alt="Voltar para as listas"></a>
                         <a href="#" class="back-to-tasks"><img src="./imgs/icons/tasks-icon.svg" alt="Voltar para as listas"></a>           
                     </div>
             

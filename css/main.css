@@ -11,7 +11,7 @@
   font-size: 18px;
   color: white;
   -webkit-transition: ease 300ms;
-  transition: ease 300ms;
+  transition: ease-in-out 300ms;
   text-decoration: none;
 }
 
@@ -19,6 +19,7 @@
   background-color: transparent;
   border: 1px solid #3ABAD6;
   color: #3ABAD6;
+  transform: translateY(-5px);
 }
 
 .secondary-button {
@@ -37,6 +38,7 @@
 .secondary-button:hover {
   background-color: #3ABAD6;
   color: white;
+  transform: translateY(-5px);
 }
 
 .error {

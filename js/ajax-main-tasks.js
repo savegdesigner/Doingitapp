@@ -21,6 +21,20 @@ xmlhttp.onreadystatechange = function(){
 
         tasks.innerHTML = response;
 
+        var task_check = document.querySelectorAll('.task-check')
+
+        // Check if completed to set style
+        task_check.forEach(check => {
+        var complete = check.getAttribute('data-complete')
+
+        if (complete == 1) {
+            // Setting style to COMPLETED checkbox
+            check.classList.add('complete')
+
+        }
+
+    })
+
     }
 
 }
