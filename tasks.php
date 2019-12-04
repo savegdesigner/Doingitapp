@@ -25,6 +25,7 @@ $update = false;
     <link rel="stylesheet" href="css/media.css">
 
     <script defer src="./js/ajax-main-tasks.js"></script>
+    <script defer src="./js/task-done.js"></script>
 
 </head>
 <body>

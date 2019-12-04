@@ -28,8 +28,8 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
                 <section  class='list'>
 
                     <div class='content'>
-                        <input type='checkbox' class='task-check' id='task'>
-                        <label class='task-name'>{$data['task_name']}</label>
+                        <input type='checkbox' class='task-check' id='task-check' value='{$data['task_id']}' data-complete='{$data['task_complete']}'>
+                        <h3 class='task-name'>{$data['task_name']}</h3>
                         <a href='./servidor/edit-task.php?edit_id={$data['task_id']}&listid=$list_id&listname=$list_name'><img src='./imgs/icons/edit-button.svg' alt='Editar Lista' class='edit-button'></a>
                     </div>
 

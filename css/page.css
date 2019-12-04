@@ -212,10 +212,6 @@ nav{
     cursor: pointer;
 }
 
-.task-check:checked{
-    background-color: #3b3b3b;
-}
-
 
 /* Icons */
 .edit-avatar{
@@ -236,7 +232,7 @@ nav{
     text-align: center;
     font-family: 'Poppins';
     font-size: 18px;
-    color: rgb(46, 146, 168);
+    color: #2e92a8;
 }
 
 
