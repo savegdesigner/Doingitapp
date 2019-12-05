@@ -19,10 +19,10 @@
 
 | projeto_pi_db | | 
 | ------------- | ------------- |
-| users  | id_user  |
-| lists  | username_user |
-| tasks  | email_user |
-| rate   | password_user |
+| users  | id_user  | username_user | email_user | password_user |
+| lists  | id_user  | username_user | email_user | password_user |
+| tasks  | id_user  | username_user | email_user | password_user |
+| rate   | id_user  | username_user | email_user | password_user |
 
 ---
 
