@@ -19,7 +19,7 @@
 
 | projeto_pi_db | 
 | ------------- | 
-| users  |
+| *users*  |
 | lists  |
 | tasks  |
 | rate   |
