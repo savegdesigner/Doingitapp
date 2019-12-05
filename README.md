@@ -1,5 +1,4 @@
-[![Doingit App Logo](https://github.com/savegdesigner/Doingitapp/blob/master/doingit-logo.svg)](https://www.figma.com/file/Coe33UYVqTItWYO3cv4HVe/DoingIt-App?node-id=0%3A1)
-
+![Doingit App Logo](https://github.com/savegdesigner/Doingitapp/blob/master/doingit-logo.svg)
 
 ## Crie e planeje suas listas de tarefas! :ledger: :gem:
 
