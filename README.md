@@ -2,8 +2,6 @@
 
 ## Crie e planeje suas listas de tarefas! :ledger: :gem:
 
----
-
 ### Autor 
 - [**_Vinicius Savegnago_**](https://www.instagram.com/vsgdesigner/)
 
