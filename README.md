@@ -17,12 +17,12 @@
 
 ## Estrutura do banco de dados
 
-| projeto_pi_db | || 
-| ------------- || ------------- |
-| users  || id_user  |
-| lists  || username_user |
-| tasks  || email_user |
-| rate   || password_user |
+| projeto_pi_db | | 
+| ------------- | ------------- |
+| users  | id_user  |
+| lists  | username_user |
+| tasks  | email_user |
+| rate   | password_user |
 
 ---
 
