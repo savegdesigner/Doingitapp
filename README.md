@@ -7,7 +7,7 @@
 
 ---
 
-### Instalando o projeto
+## Instalando o projeto
 1. Faça um clone do repositório. `$ git clone`
 2. Configure corretamente sua porta para acesso.
 3. Crie o banco de dados. (Siga a estrutura)
@@ -15,10 +15,10 @@
 
 ---
 
-### Estrutura do banco de dados
+## Estrutura do banco de dados
 
-| projeto_pi_db | 
-| ------------- | 
+| ###projeto_pi_db | 
+| ------------- | | ------------- | 
 | **users**  || id_user  |
 | **lists**  || username_user |
 | **tasks**  || email_user |
@@ -26,7 +26,7 @@
 
 ---
 
-### Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - HTML
 - CSS
