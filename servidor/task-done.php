@@ -29,7 +29,6 @@ if(isset($task_id)){
         
         $dataResult = $result->fetch_assoc();
 
-        // echo $dataResult['task_complete'];
 
         if($dataResult['task_complete'] == 0){
 

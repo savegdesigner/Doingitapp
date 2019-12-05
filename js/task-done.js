@@ -41,7 +41,7 @@ function sendAjax(data) {
 
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 1) {
-            console.log('Enviando...')
+            console.log('Atualizando...')
 
         }
 

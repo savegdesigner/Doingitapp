@@ -2,14 +2,14 @@
 
 var task_icon = document.querySelector('.back-to-tasks')
 
-var icon_wrapper_div = document.querySelector('.route-span-wrapper')
+var route_span_wrapper = document.querySelector('.route-span-wrapper')
 
 task_icon.addEventListener('click', (e) =>{
     e.preventDefault()
-    icon_wrapper_div.style.display = 'block'
+    route_span_wrapper.style.display = 'flex'
 
     setInterval(() =>{
-        icon_wrapper_div.style.display = 'none'
-    }, 3000)
+        route_span_wrapper.style.display = 'none'
+    }, 2000)
 
 })

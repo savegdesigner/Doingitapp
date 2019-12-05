@@ -1,3 +1,9 @@
+@media (max-height: 490){
+    .doingit-logo{
+        width: 180px;
+    }
+}
+
 @media (max-width: 520px){
 
     .doingit-logo{
@@ -47,8 +53,34 @@
 
 }
 
-@media (max-height: 490){
-    .doingit-logo{
-        width: 180px;
+
+@media (max-width: 620px){
+    .exit{
+        width: 40px;
     }
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    nav{
+        padding: 10px;
+    }
+
+    .edit-avatar{
+        left: 83px;
+    }
+
+    .inicio-page{
+        margin-top: 60px;
+    }
+
+    .todo-box{
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+    }
+
 }

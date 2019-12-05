@@ -100,6 +100,7 @@ $update = false;
                     <div class="route">
                         <div class="route-span-wrapper">
                             <span class="route-span">Selecione uma lista</span>
+                            <img class="tap" src="./imgs/icons/tap.svg" alt="Clique em uma lista">
                         </div>
                         
                         <a href="#" class="unset"><img src="./imgs/icons/lists-icon.svg" alt="Voltar para as listas"></a>
