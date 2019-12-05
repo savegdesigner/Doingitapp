@@ -17,7 +17,7 @@
 
 ## Estrutura do banco de dados
 
-| projeto_pi_db | | 
+| projeto_pi_db | | | | | 
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | users  | id_user  | username_user | email_user | password_user |
 | lists  | id_user  | username_user | email_user | password_user |
