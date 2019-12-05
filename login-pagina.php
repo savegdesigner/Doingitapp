@@ -47,7 +47,11 @@ if(isset($_SESSION['userUid'])){
                 }else if($_GET['error'] == "wrongpassword"){
                     echo '<span class="error">Senha inválida</span>';
 
+                }else if($_GET['error'] == "nouser"){
+                    echo '<span class="error">E-mail não encontrado</span>';
+
                 }
+
             }else if(isset($_GET['signup'])){
                 echo '<span class="success">Cadastrado com sucesso</span>';
             }

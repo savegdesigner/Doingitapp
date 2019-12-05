@@ -63,7 +63,16 @@ $update = false;
                     </div>
 
                     <div class="add-lists">
-                        <h2>Adicionar nova lista</h2>
+
+                    <?php 
+                        if(isset($_GET['listupdateid'])){
+                            echo "<h2>Editar sua lista</h2>";
+
+                        }else{
+                            echo "<h2>Adicionar nova lista</h2>";
+
+                        }
+                    ?>          
 
                         <form method="POST" action="./servidor/add-list.php" class="add">
 

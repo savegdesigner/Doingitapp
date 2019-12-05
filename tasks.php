@@ -61,7 +61,16 @@ $update = false;
                     </div>
 
                     <div class="add-lists">
-                        <h2>Adicionar nova tarefa</h2>
+
+                    <?php 
+                        if(isset($_GET['taskupdateid'])){
+                            echo "<h2>Editar sua tarefa</h2>";
+
+                        }else{
+                            echo "<h2>Adicionar nova tarefa</h2>";
+
+                        }
+                    ?>  
 
                         <form method="POST" action="./servidor/add-tasks.php" class="add">
 
