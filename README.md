@@ -9,7 +9,7 @@
 
 ## Design do Projeto
 
-[![Figma Logo](https://github.com/savegdesigner/Doingitapp/blob/master/figma-logo.svg)](https://www.figma.com/file/Coe33UYVqTItWYO3cv4HVe/DoingIt-App?node-id=0%3A1)
+[![Figma Logo](https://github.com/savegdesigner/Doingitapp/blob/master/figma-logo.svg)(https://www.figma.com/file/Coe33UYVqTItWYO3cv4HVe/DoingIt-App?node-id=0%3A1)]
 
 ## Instalando o projeto
 1. Faça um clone do repositório. `$ git clone`
